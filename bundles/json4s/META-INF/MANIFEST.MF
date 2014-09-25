@@ -1,0 +1,20 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: JSON4S OSGi Bundle
+Bundle-SymbolicName: json4s
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: Mark Czotter
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-ClassPath: .,
+ lib/org.json4s.ast_2.11_3.2.10.jar,
+ lib/org.json4s.core_2.11_3.2.10.jar,
+ lib/org.json4s.ext_2.11_3.2.10.jar,
+ lib/org.json4s.jackson_2.11_3.2.10.jar,
+ lib/org.json4s.native_2.11_3.2.10.jar
+Export-Package: org.json4s, 
+ org.json4s.ext,
+ org.json4s.jackson,
+ org.json4s.reflect
+Require-Bundle: org.scala-lang.scala-library;bundle-version="2.11.1",
+ com.fasterxml.jackson.core.jackson-databind;bundle-version="2.4.1",
+ com.fasterxml.jackson.core.jackson-core;bundle-version="2.4.1"
