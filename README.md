@@ -28,5 +28,7 @@ After that head over to the example project and use the provided launch config t
 Feel free to contribute if you'd like so.
 Fork this repository, commit your changes and send a pull request.
 
+## License
 
+[Eclipse Public License 1.0](https://www.eclipse.org/legal/epl-v10.html)
 
