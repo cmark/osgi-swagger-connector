@@ -2,13 +2,13 @@
 
 ## Features
 The OSGi - Swagger connector provides one simple OSGi bundle, which exposes Swagger documentation (computed from JAX-RS services exposed via the [OSGi - JAX-RS Connector](https://github.com/hstaudacher/osgi-jax-rs-connector/)) in OSGi environments.
-It contains a wrapper bundle which provides 
+It contains a wrapper bundle for json4s, so it can work in OSGi environments.
 
 ## Notes
  * Tested it only on Equinox based OSGi environments running mostly from Eclipse (but it might work in Virgo as well).
 
 ## Installation
-As soon as I finish the Tycho build for the project I'll provide a p2 update site with all required bundles. 
+As soon as I finish the Tycho build for the project I'll provide a p2 update site with all required bundles. Until then you have to compile, package and deploy the bundles. See next section.
 
 ## Run/Try it out
 For now you have to compile for yourself. To do this you have to setup the target platform, which is located under the releng project.
