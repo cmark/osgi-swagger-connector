@@ -20,7 +20,6 @@
 	</properties>
 
 	<modules>
-		<module>../com.cmark.swagger.dep.p2</module>
 		<module>../com.cmark.swagger.target</module>
 		<module>../../bundles/com.cmark.swagger.publisher</module>
 		<module>../../bundles/json4s</module>
