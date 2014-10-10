@@ -22,6 +22,7 @@
 	<modules>
 		<module>../com.cmark.swagger.target</module>
 		<module>../../bundles/com.cmark.swagger.publisher</module>
+		<module>../../examples/com.cmark.swagger.osgi.example</module>
 		<module>../../bundles/com.cmark.swagger.ui</module>
 		<module>../../bundles/json4s</module>
 	</modules>
