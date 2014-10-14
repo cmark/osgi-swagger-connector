@@ -1,0 +1,2 @@
+language: java
+script: "mvn releng/com.cmark.swagger.parent/pom.xml clean verify"
