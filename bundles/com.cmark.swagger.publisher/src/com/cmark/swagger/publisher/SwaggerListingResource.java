@@ -37,7 +37,7 @@ public class SwaggerListingResource extends ApiListingResourceJSON {
 	@Override
 	public Response apiDeclaration(@PathParam("route") String route, @Context Application app, @Context  WebConfig wc,
 			@Context HttpHeaders headers, @Context UriInfo uriInfo) {
-		System.out.println("API listing");
+		System.out.println("API listing for: " + route);
 		return super.apiDeclaration(route, app, wc, headers, uriInfo);
 	}
 	

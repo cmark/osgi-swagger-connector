@@ -5,12 +5,93 @@
 
 	<artifactId>com.cmark.swagger.osgi.example</artifactId>
 	<packaging>eclipse-test-plugin</packaging>
-	
+
 	<parent>
 		<groupId>com.cmark.swagger.osgi</groupId>
 		<artifactId>com.cmark.swagger.parent</artifactId>
 		<version>1.0.0-SNAPSHOT</version>
 		<relativePath>../../releng/com.cmark.swagger.parent</relativePath>
 	</parent>
-	
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-surefire-plugin</artifactId>
+				<version>${tycho.version}</version>
+				<configuration>
+					<useUIHarness>false</useUIHarness>
+					<useUIThread>false</useUIThread>
+					<argLine>-Xms256m -Xmx512m -Dorg.osgi.service.http.port=8280</argLine>
+					<showEclipseLog>true</showEclipseLog>
+					<bundleStartLevel>
+						<bundle>
+							<id>org.eclipse.equinox.ds</id>
+							<level>1</level>
+							<autoStart>true</autoStart>
+						</bundle>
+						<bundle>
+							<id>org.eclipse.equinox.http.jetty</id>
+							<level>2</level>
+							<autoStart>true</autoStart>
+						</bundle>
+						<bundle>
+							<id>com.eclipsesource.jaxrs.publisher</id>
+							<level>3</level>
+							<autoStart>true</autoStart>
+						</bundle>
+						<bundle>
+							<id>com.fasterxml.jackson.jaxrs.jackson-jaxrs-json-provider</id>
+							<level>3</level>
+							<autoStart>true</autoStart>
+						</bundle>
+						<bundle>
+							<id>com.cmark.swagger.publisher</id>
+							<level>3</level>
+							<autoStart>true</autoStart>
+						</bundle>
+						<!-- Start bundles that contribute REST services -->
+						<bundle>
+							<id>com.cmark.swagger.osgi.example</id>
+							<level>4</level>
+							<autoStart>true</autoStart>
+						</bundle>
+					</bundleStartLevel>
+					<dependencies>
+						<dependency>
+							<type>p2-installable-unit</type>
+							<artifactId>org.eclipse.equinox.ds</artifactId>
+							<version>1.4.0</version>
+						</dependency>
+						<dependency>
+							<type>eclipse-feature</type>
+							<artifactId>org.eclipse.equinox.core.feature</artifactId>
+							<version>1.1.0</version>
+						</dependency>
+						<dependency>
+							<type>eclipse-feature</type>
+							<artifactId>org.eclipse.equinox.compendium.sdk</artifactId>
+							<version>3.8.0</version>
+						</dependency>
+						<dependency>
+							<type>eclipse-feature</type>
+							<artifactId>org.eclipse.equinox.server.jetty</artifactId>
+							<version>1.1.0</version>
+						</dependency>
+						<dependency>
+							<type>p2-installable-unit</type>
+							<artifactId>com.eclipsesource.jaxrs.publisher</artifactId>
+							<version>4.1.0</version>
+						</dependency>
+						<dependency>
+							<type>p2-installable-unit</type>
+							<artifactId>com.fasterxml.jackson.jaxrs.jackson-jaxrs-json-provider</artifactId>
+							<version>2.4.1</version>
+						</dependency>
+					</dependencies>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
 </project>
