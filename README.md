@@ -1,4 +1,5 @@
 # OSGi - Swagger Connector 1.0
+[![Build Status](https://travis-ci.org/CMark/osgi-swagger-connector.svg?branch=master)](https://travis-ci.org/CMark/osgi-swagger-connector)
 
 ## Features
 The OSGi - Swagger connector provides one simple OSGi bundle, which exposes Swagger documentation (computed from JAX-RS services exposed via the [OSGi - JAX-RS Connector](https://github.com/hstaudacher/osgi-jax-rs-connector/)) in OSGi environments.
