@@ -14,16 +14,16 @@ As soon as I finish the Tycho build for the project I'll provide a p2 update sit
 ## Run/Try it out
 For now you have to compile for yourself. To do this you have to setup the target platform, which is located under the releng project.
 Unfortunately Swagger is not so friendly with OSGi, I had to replace/add proper manifest content in order to make it work properly in OSGi envs.
-To use this customized Swagger, you have to execute mvn clean verify jetty:run -Pregenerate in the dep.p2 project. 
+To use this customized Swagger, you have to execute `mvn clean verify jetty:run -Pregenerate` in the `com.cmark.swagger.dep.p2` project. 
 This will generate a local p2 update site with the proper Swagger bundles.
-After this head over to swagger.target project and open the com.cmark.swagger.target.target file and click on Set as Target platform (assuming you are working in Eclipse).
+After this head over to `com.cmark.swagger.target` project and open the `com.cmark.swagger.target.target` file and click on Set as Target platform (assuming you are working in Eclipse).
 After that head over to the example project and use the provided launch config to start an OSGi environment with the bundles.
 
 ## Requirements
  * JRE 1.7
  * [OSGi - JAX-RS Connector](https://github.com/hstaudacher/osgi-jax-rs-connector/)
- * OSGi Core Specification R4 and an OSGi HttpService implementation (e.g. Equinox, Felix).
- * The swagger.ui bundle requires Equinox based OSGi environment.
+ * OSGi Core Specification R4 and an OSGi HttpService implementation (e.g. Equinox + Jetty).
+ * The swagger.ui bundle requires Equinox based OSGi environment (due to Extension points).
 
 ## Contributions
 Feel free to contribute if you'd like so.
