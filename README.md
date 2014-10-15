@@ -6,7 +6,7 @@ The OSGi - Swagger connector provides one simple OSGi bundle, which exposes Swag
 It contains a wrapper bundle for json4s, so it can work in OSGi environments.
 
 ## Notes
- * Tested it only on Equinox based OSGi environments running mostly from Eclipse (but it might work in Virgo as well).
+ * Tested it only on Equinox based OSGi environments running mostly from Eclipse (Felix and Virgo could work as well).
 
 ## Installation
 As soon as I finish the Tycho build for the project I'll provide a p2 update site with all required bundles. Until then you have to compile, package and deploy the bundles. See next section.
