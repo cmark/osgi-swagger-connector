@@ -50,7 +50,7 @@
 										<!-- specify your depencies here -->
 										<!-- groupId:artifactId:version -->
 										<artifact>
-											<id>com.wordnik:swagger-core_2.11:${swagger.version}</id>
+											<id>com.wordnik:swagger-core:${swagger.version}</id>
 											<source>true</source>
 											<override>true</override>
 											<transitive>true</transitive>
@@ -62,11 +62,11 @@
 													scala*,
 													com.fasterxml.jackson*,
 													org.slf4j*,
-													com.wordnik.swagger.annotations;version=${swagger.version},
+													com.wordnik.swagger.annotations;version=${swagger.osgi.version},
 													*;resolution:=optional
 												</Import-Package>
 												<Export-Package>
-													com.wordnik.swagger*;version=${swagger.version}
+													com.wordnik.swagger*;version=${swagger.osgi.version}
 												</Export-Package>
 												<_nouses>true</_nouses>
 											</instructions>
@@ -78,34 +78,34 @@
 											<transitive>false</transitive>
 										</artifact>
 										<artifact>
-											<id>com.wordnik:swagger-jaxrs_2.11:${swagger.version}</id>
+											<id>com.wordnik:swagger-jaxrs:${swagger.version}</id>
 											<source>true</source>
 											<override>true</override>
 											<transitive>false</transitive>
 											<instructions>
 												<Import-Package>
-													com.wordnik.swagger.core*;version=${swagger.version},
+													com.wordnik.swagger.core*;version=${swagger.osgi.version},
 													*;resolution:=optional
 												</Import-Package>
 												<Export-Package>
-													com.wordnik.swagger.jaxrs*;version=${swagger.version}
+													com.wordnik.swagger.jaxrs*;version=${swagger.osgi.version}
 												</Export-Package>
 												<_nouses>true</_nouses>
 											</instructions>
 										</artifact>
 										<artifact>
-											<id>com.wordnik:swagger-jersey2-jaxrs_2.11:${swagger.version}</id>
+											<id>com.wordnik:swagger-jersey2-jaxrs:${swagger.version}</id>
 											<source>true</source>
 											<override>true</override>
 											<transitive>false</transitive>
 											<instructions>
 												<Import-Package>
-													com.wordnik.swagger.core*;version=${swagger.version},
-													com.wordnik.swagger.jaxrs*;version=${swagger.version},
+													com.wordnik.swagger.core*;version=${swagger.osgi.version},
+													com.wordnik.swagger.jaxrs*;version=${swagger.osgi.version},
 													*;resolution:=optional
 												</Import-Package>
 												<Export-Package>
-													com.wordnik.swagger.jersey*;version=${swagger.version}
+													com.wordnik.swagger.jersey*;version=${swagger.osgi.version}
 												</Export-Package>
 												<_nouses>true</_nouses>
 											</instructions>
